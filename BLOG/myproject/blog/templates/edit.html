@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="{%url 'detail' blog.id%}">돌아가기</a><br>
+    <div class="container">
+        <h1 style="color:orangered">수정하기</h1>
+        <form action="{% url 'update' blog.id%}">
+            <h4>제목: </h4>
+            <input type="text" name="title" value={{blog.title}}>
+            <br>
+            <br>
+            <h4>본문: </h4>
+            <textarea cols=40 rows=10 name="body">{{blog.body}}</textarea>
+            <br>
+            <br>
+            <input class="btn btn-dark" type="submit" value="EDIT">
+        </form>
+    </div>
+</body>
+</html>

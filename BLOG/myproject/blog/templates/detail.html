@@ -5,3 +5,11 @@
 <h2>{{blog.title}}</h2>
 {{blog.pub_date}}
 <h3>{{blog.body}}</h3>
+
+<form action="{% url 'edit' blog.id %}">
+    <input class="btn btn-dark" type="submit" value="수정하기">
+</form>
+
+<form action="{% url 'delete' blog.id %}">
+    <input class="btn btn-dark" type="submit" value="삭제">
+</form>
